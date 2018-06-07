@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.agendapp.agendapp.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF8000"
+        android:id="@+id/cabecalho"
+        android:orientation="horizontal"
+        android:padding="10dip"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="bold|italic"
+            android:layout_width="fill_parent"
+            android:textSize="20dp"
+            android:gravity="center_horizontal"
+            android:id="@+id/texto1"
+            android:text="@string/app_name" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:background="#FF8000"
+        android:layout_height="wrap_content"
+        android:id="@+id/rodape"
+        android:padding="10dip">
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:gravity="center_horizontal"
+            android:id="@+id/texto2"
+            android:text="By Technology and Development" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="320dp"
+        android:layout_height="70dp"
+        android:text="Novo Compromisso"
+        android:textColor="#FFF"
+        android:id="@+id/button"
+        android:background="@android:drawable/alert_dark_frame"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="122dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:onClick="newEvent" />
+
+    <Button
+        android:layout_width="320dp"
+        android:layout_height="70dp"
+        android:text="Proximos Compromissos"
+        android:textColor="#FFF"
+        android:id="@+id/button2"
+        android:layout_below="@+id/button"
+        android:background="@android:drawable/alert_dark_frame"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:onClick="showEventByDate"
+        android:enabled="true"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="320dp"
+        android:layout_height="70dp"
+        android:text="Todos os Compromissos"
+        android:textColor="#FFF"
+        android:id="@+id/button3"
+        android:background="@android:drawable/alert_dark_frame"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:onClick="showAllEvent" />
+</RelativeLayout>
